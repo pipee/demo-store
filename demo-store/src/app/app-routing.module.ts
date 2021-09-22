@@ -5,9 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { DemoComponent } from './demo/demo.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo:'/home',
+    pathMatch:'full'
+  },
   {
     path: 'home',
     component: HomeComponent
@@ -23,6 +29,10 @@ const routes: Routes = [
   {
     path: 'demo',
     component: DemoComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
