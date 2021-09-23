@@ -26,4 +26,11 @@ export class ProductService {
     return this.http.post(`${environment.ulr_api}/products`, product);
   }
 
+  updateProduct(id: string, changes: Partial<Product>){
+    return this.http.put(`${environment.ulr_api}/products/${id}`, changes);
+  }
+
+  deleteProduct(id: string){
+    return this.http.delete(`${environment.ulr_api}/products/${id}`);
+  }
 }
