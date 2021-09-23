@@ -15,11 +15,15 @@ export class ProductService {
   ) { }
 
   getAllProducts(){
-    return this.http.get<Product []>(environment.ulr_api);
+    return this.http.get<Product []>(`${environment.ulr_api}/products`);
   }
 
   getProduct(id: string){
-    return this.http.get<Product>(`${environment.ulr_api}${id}`);
+    return this.http.get<Product>(`${environment.ulr_api}/products/${id}`);
+  }
+
+  createProduct(product: Product){
+    return this.http.post(`${environment.ulr_api}/products`, product);
   }
 
 }

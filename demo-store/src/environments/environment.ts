@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ulr_api: 'http://platzi-store.herokuapp.com/products'
+  ulr_api: 'http://platzi-store.herokuapp.com'
 };
 
 /*

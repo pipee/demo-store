@@ -34,4 +34,17 @@ export class ProductDetailComponent implements OnInit {
       this.product = res;
     });
   }
+
+  createProduct () {
+    const newProduct: Product = {
+      id: '123',
+      title: "camisa",
+      image: "assets/images/camiseta.png",
+      price: 30000,
+      description: "nuevo producto desde angular"
+    };
+    this.productsService.createProduct(newProduct).subscribe(res => {
+      console.log(this.product);
+    });
+  }
 }
