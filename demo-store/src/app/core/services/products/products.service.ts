@@ -15,6 +15,7 @@ export class ProductsService {
   ) { }
 
   getAllProducts(){
+    console.log(`${environment.ulr_api}/products`);
     return this.http.get<Product []>(`${environment.ulr_api}/products`);
   }
 

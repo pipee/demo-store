@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  ulr_api: 'http://platzi-store.herokuapp.com/products',
+  ulr_api: 'https://platzi-store.herokuapp.com',
   firebase: {
     apiKey: "AIzaSyADbV_RzSro2mtSM9ZcjZokA1wCYX7J6Zg",
     authDomain: "fir-store-c13e4.firebaseapp.com",
